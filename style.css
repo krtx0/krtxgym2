@@ -19,22 +19,13 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
+/* Hide scrollbar everywhere */
+* {
+  scrollbar-width: none;
 }
 
-::-webkit-scrollbar-track {
-    background: #0D0D0D;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #FF5C1A;
-    border-radius: 0;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #e54d0f;
+*::-webkit-scrollbar {
+  display: none;
 }
 
 /* Typography Adjustments */
@@ -122,4 +113,5 @@ iframe {
 }
 :root {
   --header-height: 100px;
+
 }
