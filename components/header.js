@@ -59,22 +59,24 @@ class CustomHeader extends HTMLElement {
   <div id="mobile-menu"
   class="hidden md:hidden bg-black/95 backdrop-blur-xl border-t border-white/10">
 
-  <div class="flex flex-col divide-y divide-white/10 text-sm uppercase tracking-wider">
+  <div class="flex flex-col items-center text-center
+              text-sm uppercase tracking-wider
+              py-6 space-y-4">
 
-    <a href="#home" class="px-6 py-4 hover:bg-white/5 transition">Home</a>
-    <a href="#about" class="px-6 py-4 hover:bg-white/5 transition">About</a>
-    <a href="#trainers" class="px-6 py-4 hover:bg-white/5 transition">Trainers</a>
-    <a href="#membership" class="px-6 py-4 hover:bg-white/5 transition">Membership</a>
-    <a href="#gallery" class="px-6 py-4 hover:bg-white/5 transition">Gallery</a>
-    <a href="#reviews" class="px-6 py-4 hover:bg-white/5 transition">Reviews</a>
-    <a href="#contact" class="px-6 py-4 hover:bg-white/5 transition">Contact</a>
+    <a href="#home" class="hover:text-gym-orange transition">Home</a>
+    <a href="#about" class="hover:text-gym-orange transition">About</a>
+    <a href="#trainers" class="hover:text-gym-orange transition">Trainers</a>
+    <a href="#membership" class="hover:text-gym-orange transition">Membership</a>
+    <a href="#gallery" class="hover:text-gym-orange transition">Gallery</a>
+    <a href="#reviews" class="hover:text-gym-orange transition">Reviews</a>
+    <a href="#contact" class="hover:text-gym-orange transition">Contact</a>
 
-    <div class="px-6 py-5">
-      <a href="#membership"
-         class="block text-center bg-gym-orange text-white py-3 rounded-full font-semibold">
-        Join Now
-      </a>
-    </div>
+    <!-- CTA -->
+    <a href="#membership"
+       class="mt-4 px-8 py-3 bg-gym-orange text-white
+              rounded-full font-semibold">
+      Join Now
+    </a>
 
   </div>
 
@@ -87,4 +89,5 @@ class CustomHeader extends HTMLElement {
 
 
 customElements.define('custom-header', CustomHeader);
+
 
