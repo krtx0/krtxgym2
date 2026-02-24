@@ -57,22 +57,28 @@ class CustomHeader extends HTMLElement {
 
   <!-- Mobile Menu -->
   <div id="mobile-menu"
-    class="hidden md:hidden bg-black/90 backdrop-blur-xl border-t border-white/10">
+  class="hidden md:hidden bg-black/95 backdrop-blur-xl border-t border-white/10">
 
-    <div class="px-6 py-4 space-y-4
-                text-sm uppercase tracking-wider">
+  <div class="flex flex-col divide-y divide-white/10 text-sm uppercase tracking-wider">
 
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#trainers">Trainers</a>
-      <a href="#membership">Membership</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
+    <a href="#home" class="px-6 py-4 hover:bg-white/5 transition">Home</a>
+    <a href="#about" class="px-6 py-4 hover:bg-white/5 transition">About</a>
+    <a href="#trainers" class="px-6 py-4 hover:bg-white/5 transition">Trainers</a>
+    <a href="#membership" class="px-6 py-4 hover:bg-white/5 transition">Membership</a>
+    <a href="#gallery" class="px-6 py-4 hover:bg-white/5 transition">Gallery</a>
+    <a href="#reviews" class="px-6 py-4 hover:bg-white/5 transition">Reviews</a>
+    <a href="#contact" class="px-6 py-4 hover:bg-white/5 transition">Contact</a>
 
+    <div class="px-6 py-5">
+      <a href="#membership"
+         class="block text-center bg-gym-orange text-white py-3 rounded-full font-semibold">
+        Join Now
+      </a>
     </div>
 
   </div>
+
+</div>
 
 </nav>
 `;
@@ -81,3 +87,4 @@ class CustomHeader extends HTMLElement {
 
 
 customElements.define('custom-header', CustomHeader);
+
