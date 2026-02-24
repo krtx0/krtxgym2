@@ -61,7 +61,7 @@ class CustomHeader extends HTMLElement {
 
   <div class="flex flex-col items-center text-center
               text-sm uppercase tracking-wider
-              py-6 space-y-8">
+              py-6 space-y-6">
 
     <a href="#home" class="hover:text-gym-orange transition">Home</a>
     <a href="#about" class="hover:text-gym-orange transition">About</a>
@@ -89,6 +89,7 @@ class CustomHeader extends HTMLElement {
 
 
 customElements.define('custom-header', CustomHeader);
+
 
 
 
