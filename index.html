@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Fitness Hub | Thane's Most Trusted Gym</title>
+    <meta name="description" content="Universal Fitness Hub - Thane's premier gym in Vasant Vihar with expert trainers, imported equipment, and real results. Join the movement.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+    
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gym-black': '#0D0D0D',
+                        'gym-dark': '#141414',
+                        'gym-card': '#1A1A1A',
+                        'gym-orange': '#FF5C1A',
+                        'gym-red': '#E8272A',
+                        'gym-gray': '#2A2A2A',
+                    },
+                    fontFamily: {
+                        'display': ['"Bebas Neue"', 'sans-serif'],
+                        'body': ['"DM Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gym-black text-white font-body antialiased overflow-x-hidden">
+
+    <!-- Grain Overlay -->
+    <div class="fixed inset-0 pointer-events-none z-50 grain-overlay opacity-[0.03]"></div>
+
+    <custom-header></custom-header>
+  
+
+    <!-- Hero Section -->
+    <section id="home"
+ class="relative min-h-[calc(140vh-120px)] flex items-center mt-[80px]">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg" alt="Gym Interior" class="w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-t from-gym-black via-gym-black/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-gym-black/90 via-transparent to-gym-black/90"></div>
+        </div>
+
+        <!-- Diagonal Divider -->
+        <div class="absolute bottom-0 left-0 w-full h-24 bg-gym-black transform -skew-y-2 origin-bottom-left z-10 translate-y-12"></div>
+
+        <!-- Content -->
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="hero-content opacity-0 translate-y-10 transition-all duration-1000 ease-out">
+                <h1 class="font-display text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] leading-none tracking-tight mb-6 text-white drop-shadow-2xl">
+                    YOUR TRANSFORMATION<br>
+                    <span class="text-gym-orange">STARTS HERE</span>
+                </h1>
+                
+                <p class="font-body text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 font-medium">
+                    Thane's most trusted gym — real trainers, real results, real community.
+                    <span class="block text-gym-orange mt-2 font-bold">Located in Vasant Vihar, Thane West</span>
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#membership" class="bg-gym-orange hover:bg-orange-600 text-white px-8 py-4 text-lg font-bold uppercase tracking-wider transition-all transform hover:scale-105 border-2 border-gym-orange w-full sm:w-auto text-center">
+                        Get Membership →
+                    </a>
+                    <a href="#results" class="border-2 border-white hover:border-gym-orange hover:text-gym-orange text-white px-8 py-4 text-lg font-bold uppercase tracking-wider transition-all transform hover:scale-105 w-full sm:w-auto text-center bg-transparent">
+                        See Results
+                    </a>
+                </div>
+            </div>
+
+            <!-- Rating Badge -->
+           <div class="hero-badge mt-6 flex justify-center opacity-0 translate-y-10 transition-all duration-1000 delay-500 ease-out">
+    <div class="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-full flex items-center gap-3">
+        <div class="flex text-yellow-400">
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            <span class="ml-1 font-bold text-white">4.9</span>
+        </div>
+        <span class="text-gray-300 text-sm">|</span>
+        <span class="text-white font-medium text-sm">798+ Reviews</span>
+        <span class="text-gray-400 text-xs ml-2">Google Rating</span>
+    </div>
+</div>
+    </section>
+
+    <!-- Stats Strip -->
+    <section id="stats" class="relative bg-gym-dark py-16 border-y border-gym-gray transform -skew-y-1">
+        <div class="transform skew-y-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="stat-item opacity-0 translate-y-8 transition-all duration-700">
+                    <div class="font-display text-5xl sm:text-6xl md:text-7xl text-gym-orange mb-2 counter" data-target="798">999+</div>
+                    <div class="text-gray-400 uppercase tracking-wider text-sm font-bold">Happy Members</div>
+                </div>
+                <div class="stat-item opacity-0 translate-y-8 transition-all duration-700 delay-100">
+                    <div class="font-display text-5xl sm:text-6xl md:text-7xl text-gym-orange mb-2">4.9<span class="text-3xl align-top">★</span></div>
+                    <div class="text-gray-400 uppercase tracking-wider text-sm font-bold">Google Rating</div>
+                </div>
+                <div class="stat-item opacity-0 translate-y-8 transition-all duration-700 delay-200">
+                    <div class="font-display text-5xl sm:text-6xl md:text-7xl text-gym-orange mb-2 counter" data-target="3">25</div>
+                    <div class="text-gray-400 uppercase tracking-wider text-sm font-bold">Years of Excellence</div>
+                </div>
+                <div class="stat-item opacity-0 translate-y-8 transition-all duration-700 delay-300">
+                    <div class="font-display text-5xl sm:text-6xl md:text-7xl text-gym-orange mb-2">100<span class="text-3xl align-top">%</span></div>
+                    <div class="text-gray-400 uppercase tracking-wider text-sm font-bold">Results Guaranteed</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gym-black relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Image Column -->
+                <div class="about-image opacity-0 -translate-x-10 transition-all duration-1000 relative">
+                    <div class="relative">
+                        <img src="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg" alt="Gym Floor" class="w-full h-auto rounded-sm shadow-2xl">
+                        <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-gym-orange/20 -z-10 rounded-sm"></div>
+                        <div class="absolute -top-6 -left-6 w-48 h-48 border-2 border-gym-orange -z-10 rounded-sm"></div>
+                    </div>
+                </div>
+
+                <!-- Content Column -->
+                <div class="about-content opacity-0 translate-x-10 transition-all duration-1000">
+                    <h2 class="font-display text-5xl sm:text-6xl md:text-7xl mb-6 leading-tight">
+                        MORE THAN A GYM.<br>
+                        <span class="text-gym-orange">IT'S A MOVEMENT.</span>
+                    </h2>
+                    
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6 font-body">
+                        Universal Fitness Hub isn't just a place to lift weights — it's a community where beginners become athletes and goals become results. Located in the heart of Vasant Vihar, Thane West, our gym offers imported, brand-new equipment, certified trainers, and a motivating atmosphere that keeps you coming back every single day.
+                    </p>
+                    
+                    <p class="text-gray-400 mb-8">
+                        Whether you're looking to lose weight, build muscle, or simply feel your best — we've got you covered.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-gym-orange flex-shrink-0 mt-1"></i>
+                            <span class="text-gray-300">Imported & brand-new equipment</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-gym-orange flex-shrink-0 mt-1"></i>
+                            <span class="text-gray-300">Certified, experienced trainers</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-gym-orange flex-shrink-0 mt-1"></i>
+                            <span class="text-gray-300">Clean, spacious, and hygienic</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-gym-orange flex-shrink-0 mt-1"></i>
+                            <span class="text-gray-300">Personalized diet plans</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-gym-orange flex-shrink-0 mt-1"></i>
+                            <span class="text-gray-300">Female-friendly environment</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-gym-orange flex-shrink-0 mt-1"></i>
+                            <span class="text-gray-300">Never overcrowded</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section id="trainers" class="py-24 bg-gym-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 section-header opacity-0 translate-y-8 transition-all duration-1000">
+                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl mb-4">
+                    EXPERT COACHES.<br>
+                    <span class="text-gym-orange">REAL RESULTS.</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                    Meet the team that makes the magic happen. Our certified trainers bring years of experience and unmatched dedication to your fitness journey.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Trainer 1 -->
+                <div class="trainer-card bg-gym-card p-6 rounded-sm border border-gym-gray hover:border-gym-orange transition-all duration-300 transform hover:-translate-y-2 group opacity-0 translate-y-8 transition-all duration-700">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-gym-orange/30 group-hover:border-gym-orange transition-colors">
+                        <img src="https://images.pexels.com/photos/1431282/pexels-photo-1431282.jpeg" alt="Ravi Sir" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-display text-2xl text-center mb-1">RAVI SIR</h3>
+                    <p class="text-gym-orange text-center text-sm font-bold uppercase tracking-wider mb-3">Head Trainer</p>
+                    <p class="text-gray-400 text-center text-sm">Specialized in Strength Training, Weight Loss & Muscle Gain transformations.</p>
+                </div>
+
+                <!-- Trainer 2 -->
+                <div class="trainer-card bg-gym-card p-6 rounded-sm border border-gym-gray hover:border-gym-orange transition-all duration-300 transform hover:-translate-y-2 group opacity-0 translate-y-8 transition-all duration-700 delay-100">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-gym-orange/30 group-hover:border-gym-orange transition-colors">
+                        <img src="https://images.pexels.com/photos/3490348/pexels-photo-3490348.jpeg" alt="Manish Sir" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-display text-2xl text-center mb-1">MANISH SIR</h3>
+                    <p class="text-gym-orange text-center text-sm font-bold uppercase tracking-wider mb-3">Senior Coach</p>
+                    <p class="text-gray-400 text-center text-sm">Highly motivating, knowledgeable & supportive. The heart of our community.</p>
+                </div>
+
+                <!-- Trainer 3 -->
+                <div class="trainer-card bg-gym-card p-6 rounded-sm border border-gym-gray hover:border-gym-orange transition-all duration-300 transform hover:-translate-y-2 group opacity-0 translate-y-8 transition-all duration-700 delay-200">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-gym-orange/30 group-hover:border-gym-orange transition-colors">
+                        <img src="https://images.pexels.com/photos/6767229/pexels-photo-6767229.jpeg" alt="Dev Sir" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-display text-2xl text-center mb-1">DEV SIR</h3>
+                    <p class="text-gym-orange text-center text-sm font-bold uppercase tracking-wider mb-3">Fitness Coach</p>
+                    <p class="text-gray-400 text-center text-sm">Expert in Personalized Training programs & Endurance building.</p>
+                </div>
+
+                <!-- Trainer 4 -->
+                <div class="trainer-card bg-gym-card p-6 rounded-sm border border-gym-gray hover:border-gym-orange transition-all duration-300 transform hover:-translate-y-2 group opacity-0 translate-y-8 transition-all duration-700 delay-300">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-gym-orange/30 group-hover:border-gym-orange transition-colors">
+                        <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" alt="Laxman Sir" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-display text-2xl text-center mb-1">LAXMAN SIR</h3>
+                    <p class="text-gym-orange text-center text-sm font-bold uppercase tracking-wider mb-3">Trainer</p>
+                    <p class="text-gray-400 text-center text-sm">Youth Fitness specialist & Weight Management expert.</p>
+                </div>
+
+                <!-- Trainer 5 -->
+                <div class="trainer-card bg-gym-card p-6 rounded-sm border border-gym-gray hover:border-gym-orange transition-all duration-300 transform hover:-translate-y-2 group opacity-0 translate-y-8 transition-all duration-700 delay-400 md:col-span-2 lg:col-span-1">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-gym-orange/30 group-hover:border-gym-orange transition-colors">
+                        <img src="https://images.pexels.com/photos/1431283/pexels-photo-1431283.jpeg" alt="Harshal Madam" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-display text-2xl text-center mb-1">HARSHAL MADAM</h3>
+                    <p class="text-gym-orange text-center text-sm font-bold uppercase tracking-wider mb-3">Personal Trainer</p>
+                    <p class="text-gray-400 text-center text-sm">Female Fitness Specialist creating comfortable spaces for women.</p>
+                </div>
+            </div>
+
+            <!-- Testimonial Callout -->
+            <div class="mt-16 max-w-3xl mx-auto bg-gym-orange/10 border-l-4 border-gym-orange p-6 rounded-r-sm opacity-0 translate-y-8 transition-all duration-1000 delay-500">
+                <blockquote class="text-xl italic text-gray-300 font-body">
+                    "Special thanks to Manish Sir and Ravi Sir — both are extremely knowledgeable, supportive, and always there to push you further."
+                </blockquote>
+                <cite class="block mt-4 text-gym-orange font-bold not-italic">— AADI, Member</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section id="membership" class="py-24 bg-gym-black relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 section-header opacity-0 translate-y-8 transition-all duration-1000">
+                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl mb-4">
+                    CHOOSE YOUR<br>
+                    <span class="text-gym-orange">FIGHT PLAN</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                    Flexible membership options designed to fit your goals and budget. No hidden fees. No excuses.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Monthly Plan -->
+                <div class="pricing-card bg-gym-card p-8 rounded-sm border border-gym-gray hover:border-gray-500 transition-all duration-300 transform hover:-translate-y-2 opacity-0 translate-y-8 transition-all duration-700">
+                    <h3 class="font-display text-3xl mb-2">MONTHLY</h3>
+                    <div class="text-gray-400 mb-6 uppercase tracking-wider text-sm">Basic Access</div>
+                    <div class="font-display text-5xl text-white mb-6">
+                        ₹____<span class="text-xl text-gray-500 font-body">/month</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-gray-300">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-gym-orange"></i>
+                            <span>Full gym access</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-gym-orange"></i>
+                            <span>Basic trainer guidance</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-gym-orange"></i>
+                            <span>Access to all equipment</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-gym-orange"></i>
+                            <span>Locker facility</span>
+                        </li>
+                    </ul>
+                    <button class="w-full border-2 border-white hover:border-gym-orange hover:text-gym-orange text-white py-3 font-bold uppercase tracking-wider transition-colors">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Quarterly Plan -->
+                <div class="pricing-card bg-gym-card p-8 rounded-sm border border-gym-gray hover:border-gray-500 transition-all duration-300 transform hover:-translate-y-2 opacity-0 translate-y-8 transition-all duration-700 delay-100">
+                    <h3 class="font-display text-3xl mb-2">QUARTERLY</h3>
+                    <div class="text-gray-400 mb-6 uppercase tracking-wider text-sm">Better Value</div>
+                    <div class="font-display text-5xl text-white mb-6">
+                        ₹____<span class="text-xl text-gray-500 font-body">/3 months</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-gray-300">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-gym-orange"></i>
+                            <span>Everything in Monthly</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-gym-orange"></i>
+                            <span>Diet guidance included</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-gym-orange"></i>
+                            <span>Progress tracking</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-gym-orange"></i>
+                            <span>Priority support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full border-2 border-white hover:border-gym-orange hover:text-gym-orange text-white py-3 font-bold uppercase tracking-wider transition-colors">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Yearly Plan (Featured) -->
+                <div class="pricing-card bg-gym-card p-8 rounded-sm border-2 border-gym-orange relative transform hover:-translate-y-2 transition-all duration-700 delay-200 opacity-0 translate-y-8 scale-105 z-10">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gym-orange text-white px-4 py-1 text-sm font-bold uppercase tracking-wider rounded-sm">
+                        Best Value
+                    </div>
+                    <h3 class="font-display text-3xl mb-2 text-gym-orange">YEARLY</h3>
+                    <div class="text-gray-400 mb-6 uppercase tracking-wider text-sm">Transformation Package</div>
+                    <div class="font-display text-5xl text-gym-orange mb-6">
+                        ₹____<span class="text-xl text-gray-500 font-body">/year</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-gray-300">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-gym-orange"></i>
+                            <span>Full access + All benefits</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-gym-orange"></i>
+                            <span>Customized diet plan</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-gym-orange"></i>
+                            <span>Personal training sessions</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-gym-orange"></i>
+                            <span>Supplement guidance</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-gym-orange"></i>
+                            <span>Body composition analysis</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gym-orange hover:bg-orange-600 text-white py-3 font-bold uppercase tracking-wider transition-colors shadow-lg shadow-gym-orange/30">
+                        Join Now →
+                    </button>
+                </div>
+            </div>
+            
+            <p class="text-center text-gray-500 mt-8 text-sm">*Contact us for exact pricing details and current offers</p>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="py-24 bg-gym-dark relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 section-header opacity-0 translate-y-8 transition-all duration-1000">
+                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl mb-4">
+                    REAL PEOPLE.<br>
+                    <span class="text-gym-orange">REAL RESULTS.</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                    These transformations happened right here in Vasant Vihar. Your story could be next.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+                <!-- Result 1 -->
+                <div class="result-card bg-gym-card p-6 rounded-sm border-t-4 border-gym-orange hover:bg-gym-gray transition-all duration-300 transform hover:-translate-y-1 opacity-0 translate-y-8 transition-all duration-700">
+                    <div class="text-4xl mb-3">🔥</div>
+                    <div class="font-display text-3xl text-gym-orange mb-2">20KG</div>
+                    <div class="text-white font-bold mb-1">Lost in 3 months</div>
+                    <div class="text-gray-500 text-sm mb-3">Rahul W.</div>
+                    <p class="text-gray-400 text-xs italic">"Changed my life completely. Best decision ever."</p>
+                </div>
+
+                <!-- Result 2 -->
+                <div class="result-card bg-gym-card p-6 rounded-sm border-t-4 border-gym-orange hover:bg-gym-gray transition-all duration-300 transform hover:-translate-y-1 opacity-0 translate-y-8 transition-all duration-700 delay-100">
+                    <div class="text-4xl mb-3">💪</div>
+                    <div class="font-display text-3xl text-gym-orange mb-2">5KG</div>
+                    <div class="text-white font-bold mb-1">Gained in 1 month</div>
+                    <div class="text-gray-500 text-sm mb-3">Ambuj T.</div>
+                    <p class="text-gray-400 text-xs italic">"Muscle gain was faster than I expected."</p>
+                </div>
+
+                <!-- Result 3 -->
+                <div class="result-card bg-gym-card p-6 rounded-sm border-t-4 border-gym-orange hover:bg-gym-gray transition-all duration-300 transform hover:-translate-y-1 opacity-0 translate-y-8 transition-all duration-700 delay-200">
+                    <div class="text-4xl mb-3">⚡</div>
+                    <div class="font-display text-3xl text-gym-orange mb-2">10KG</div>
+                    <div class="text-white font-bold mb-1">Lost in 3 months</div>
+                    <div class="text-gray-500 text-sm mb-3">Sajju S.</div>
+                    <p class="text-gray-400 text-xs italic">"The trainers pushed me when I wanted to quit."</p>
+                </div>
+
+                <!-- Result 4 -->
+                <div class="result-card bg-gym-card p-6 rounded-sm border-t-4 border-gym-orange hover:bg-gym-gray transition-all duration-300 transform hover:-translate-y-1 opacity-0 translate-y-8 transition-all duration-700 delay-300">
+                    <div class="text-4xl mb-3">🏆</div>
+                    <div class="font-display text-3xl text-gym-orange mb-2">5KG</div>
+                    <div class="text-white font-bold mb-1">Lost in 4 weeks</div>
+                    <div class="text-gray-500 text-sm mb-3">Shekhar K.</div>
+                    <p class="text-gray-400 text-xs italic">"Incredible intensity and results."</p>
+                </div>
+
+                <!-- Result 5 -->
+                <div class="result-card bg-gym-card p-6 rounded-sm border-t-4 border-gym-orange hover:bg-gym-gray transition-all duration-300 transform hover:-translate-y-1 opacity-0 translate-y-8 transition-all duration-700 delay-400 sm:col-span-2 lg:col-span-1">
+                    <div class="text-4xl mb-3">🌟</div>
+                    <div class="font-display text-3xl text-gym-orange mb-2">MUSCLE</div>
+                    <div class="text-white font-bold mb-1">Gained in weeks</div>
+                    <div class="text-gray-500 text-sm mb-3">Selson J.</div>
+                    <p class="text-gray-400 text-xs italic">"Best gym in Thane for serious results."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-24 bg-gym-black relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 section-header opacity-0 translate-y-8 transition-all duration-1000">
+                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl mb-4">
+                    WHAT OUR<br>
+                    <span class="text-gym-orange">MEMBERS SAY</span>
+                </h2>
+                <div class="flex items-center justify-center gap-2 mb-4">
+                    <div class="flex text-yellow-400 text-2xl">
+                        <i data-lucide="star" class="w-8 h-8 fill-current"></i>
+                        <i data-lucide="star" class="w-8 h-8 fill-current"></i>
+                        <i data-lucide="star" class="w-8 h-8 fill-current"></i>
+                        <i data-lucide="star" class="w-8 h-8 fill-current"></i>
+                        <i data-lucide="star" class="w-8 h-8 fill-current"></i>
+                    </div>
+                    <span class="text-3xl font-bold text-white ml-2">4.9</span>
+                    <span class="text-gray-400 ml-2">/ 5 on Google Maps</span>
+                </div>
+                <p class="text-gym-orange font-bold">798+ Reviews</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Review 1 -->
+                <div class="review-card bg-gym-card p-6 rounded-sm border border-gym-gray hover:border-gym-gray/50 transition-all duration-300 transform hover:-translate-y-1 opacity-0 translate-y-8 transition-all duration-700">
+                    <div class="flex text-yellow-400 mb-3">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-300 mb-4 font-body">"The trainers are super supportive, and the equipment is always top-notch. Best gym in Vasant Vihar!"</p>
+                    <div class="text-gym-orange font-bold">— Shubham R.</div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card bg-gym-card p-6 rounded-sm border border-gym-gray hover:border-gym-gray/50 transition-all duration-300 transform hover:-translate-y-1 opacity-0 translate-y-8 transition-all duration-700 delay-100">
+                    <div class="flex text-yellow-400 mb-3">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-300 mb-4 font-body">"The gym is clean and has good space for workouts. Trainers help in correcting exercises form."</p>
+                    <div class="text-gym-orange font-bold">— Sanket V.</div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card bg-gym-card p-6 rounded-sm border border-gym-gray hover:border-gym-gray/50 transition-all duration-300 transform hover:-translate-y-1 opacity-0 translate-y-8 transition-all duration-700 delay-200">
+                    <div class="flex text-yellow-400 mb-3">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-300 mb-4 font-body">"Love this gym! Equipment is always clean, trainers actually care about helping you reach your goals."</p>
+                    <div class="text-gym-orange font-bold">— Sejal N.</div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card bg-gym-card p-6 rounded-sm border border-gym-gray hover:border-gym-gray/50 transition-all duration-300 transform hover:-translate-y-1 opacity-0 translate-y-8 transition-all duration-700 delay-300">
+                    <div class="flex text-yellow-400 mb-3">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-300 mb-4 font-body">"I do get personalized attention by the gym trainers. Not overcrowded like other commercial gyms."</p>
+                    <div class="text-gym-orange font-bold">— Jithin K.</div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-card bg-gym-card p-6 rounded-sm border border-gym-gray hover:border-gym-gray/50 transition-all duration-300 transform hover:-translate-y-1 opacity-0 translate-y-8 transition-all duration-700 delay-400">
+                    <div class="flex text-yellow-400 mb-3">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-300 mb-4 font-body">"As a female, it's very good — a female trainer is available. Very comfortable environment."</p>
+                    <div class="text-gym-orange font-bold">— Shilpa D.</div>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="review-card bg-gym-card p-6 rounded-sm border border-gym-gray hover:border-gym-gray/50 transition-all duration-300 transform hover:-translate-y-1 opacity-0 translate-y-8 transition-all duration-700 delay-500">
+                    <div class="flex text-yellow-400 mb-3">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-300 mb-4 font-body">"Great gym near Vasant Vihar. Quality equipment and great staff. Highly recommended!"</p>
+                    <div class="text-gym-orange font-bold">— Aryan</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-gym-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 section-header opacity-0 translate-y-8 transition-all duration-1000">
+                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl mb-4">
+                    INSIDE THE<br>
+                    <span class="text-gym-orange">HUB</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                    Take a look at where the magic happens. Real equipment. Real space. Real results.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="gallery-item relative overflow-hidden rounded-sm group cursor-pointer opacity-0 translate-y-8 transition-all duration-700">
+                    <img src="https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg" alt="Gym Equipment" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gym-orange/0 group-hover:bg-gym-orange/20 transition-colors duration-300"></div>
+                </div>
+                <div class="gallery-item relative overflow-hidden rounded-sm group cursor-pointer opacity-0 translate-y-8 transition-all duration-700 delay-100">
+                    <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg" alt="Workout Area" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gym-orange/0 group-hover:bg-gym-orange/20 transition-colors duration-300"></div>
+                </div>
+                <div class="gallery-item relative overflow-hidden rounded-sm group cursor-pointer opacity-0 translate-y-8 transition-all duration-700 delay-200">
+                    <img src="https://images.pexels.com/photos/4162449/pexels-photo-4162449.jpeg" alt="Training Session" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gym-orange/0 group-hover:bg-gym-orange/20 transition-colors duration-300"></div>
+                </div>
+                <div class="gallery-item relative overflow-hidden rounded-sm group cursor-pointer opacity-0 translate-y-8 transition-all duration-700 delay-300">
+                    <img src="https://images.pexels.com/photos/4164761/pexels-photo-4164761.jpeg" alt="Weights Section" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gym-orange/0 group-hover:bg-gym-orange/20 transition-colors duration-300"></div>
+                </div>
+                <div class="gallery-item relative overflow-hidden rounded-sm group cursor-pointer opacity-0 translate-y-8 transition-all duration-700 delay-400">
+                    <img src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg" alt="Cardio Zone" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gym-orange/0 group-hover:bg-gym-orange/20 transition-colors duration-300"></div>
+                </div>
+                <div class="gallery-item relative overflow-hidden rounded-sm group cursor-pointer opacity-0 translate-y-8 transition-all duration-700 delay-500">
+                    <img src="https://images.pexels.com/photos/4164765/pexels-photo-4164765.jpeg" alt="Community" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gym-orange/0 group-hover:bg-gym-orange/20 transition-colors duration-300"></div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://www.google.com/search?q=universal+fitness+hub+vasant+viha" target="_blank" class="inline-flex items-center gap-2 text-gym-orange hover:text-white transition-colors font-bold uppercase tracking-wider border-b-2 border-gym-orange hover:border-white pb-1">
+                    View More on Google Maps
+                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="py-24 bg-gym-black relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 section-header opacity-0 translate-y-8 transition-all duration-1000">
+                <h2 class="font-display text-5xl sm:text-6xl md:text-7xl mb-4">
+                    WHY CHOOSE<br>
+                    <span class="text-gym-orange">UNIVERSAL?</span>
+                </h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card bg-gym-dark p-8 rounded-sm border border-gym-gray hover:border-gym-orange transition-all duration-300 group opacity-0 translate-y-8 transition-all duration-700">
+                    <div class="w-14 h-14 bg-gym-orange/20 rounded-sm flex items-center justify-center mb-4 group-hover:bg-gym-orange transition-colors">
+                        <i data-lucide="dumbbell" class="w-7 h-7 text-gym-orange group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="font-display text-2xl mb-2">IMPORTED EQUIPMENT</h3>
+                    <p class="text-gray-400">Brand new, well-maintained machines from top international brands.</p>
+                </div>
+
+                <div class="feature-card bg-gym-dark p-8 rounded-sm border border-gym-gray hover:border-gym-orange transition-all duration-300 group opacity-0 translate-y-8 transition-all duration-700 delay-100">
+                    <div class="w-14 h-14 bg-gym-orange/20 rounded-sm flex items-center justify-center mb-4 group-hover:bg-gym-orange transition-colors">
+                        <i data-lucide="users" class="w-7 h-7 text-gym-orange group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="font-display text-2xl mb-2">CERTIFIED TRAINERS</h3>
+                    <p class="text-gray-400">Experienced coaches who genuinely care about your results.</p>
+                </div>
+
+                <div class="feature-card bg-gym-dark p-8 rounded-sm border border-gym-gray hover:border-gym-orange transition-all duration-300 group opacity-0 translate-y-8 transition-all duration-700 delay-200">
+                    <div class="w-14 h-14 bg-gym-orange/20 rounded-sm flex items-center justify-center mb-4 group-hover:bg-gym-orange transition-colors">
+                        <i data-lucide="sparkles" class="w-7 h-7 text-gym-orange group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="font-display text-2xl mb-2">HYGIENE FIRST</h3>
+                    <p class="text-gray-400">Clean, sanitized, and well-maintained facility. Always.</p>
+                </div>
+
+                <div class="feature-card bg-gym-dark p-8 rounded-sm border border-gym-gray hover:border-gym-orange transition-all duration-300 group opacity-0 translate-y-8 transition-all duration-700 delay-300">
+                    <div class="w-14 h-14 bg-gym-orange/20 rounded-sm flex items-center justify-center mb-4 group-hover:bg-gym-orange transition-colors">
+                        <i data-lucide="apple" class="w-7 h-7 text-gym-orange group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="font-display text-2xl mb-2">DIET PLANNING</h3>
+                    <p class="text-gray-400">Custom diet plans included with yearly memberships.</p>
+                </div>
+
+                <div class="feature-card bg-gym-dark p-8 rounded-sm border border-gym-gray hover:border-gym-orange transition-all duration-300 group opacity-0 translate-y-8 transition-all duration-700 delay-400">
+                    <div class="w-14 h-14 bg-gym-orange/20 rounded-sm flex items-center justify-center mb-4 group-hover:bg-gym-orange transition-colors">
+                        <i data-lucide="shield-check" class="w-7 h-7 text-gym-orange group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="font-display text-2xl mb-2">FEMALE FRIENDLY</h3>
+                    <p class="text-gray-400">Lady trainers available and a safe, comfortable environment.</p>
+                </div>
+
+                <div class="feature-card bg-gym-dark p-8 rounded-sm border border-gym-gray hover:border-gym-orange transition-all duration-300 group opacity-0 translate-y-8 transition-all duration-700 delay-500">
+                    <div class="w-14 h-14 bg-gym-orange/20 rounded-sm flex items-center justify-center mb-4 group-hover:bg-gym-orange transition-colors">
+                        <i data-lucide="map-pin" class="w-7 h-7 text-gym-orange group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="font-display text-2xl mb-2">PRIME LOCATION</h3>
+                    <p class="text-gray-400">Conveniently located in Vasant Vihar, Thane West.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gym-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="contact-info opacity-0 -translate-x-10 transition-all duration-1000">
+                    <h2 class="font-display text-5xl sm:text-6xl md:text-7xl mb-8">
+                        VISIT THE<br>
+                        <span class="text-gym-orange">HUB</span>
+                    </h2>
+
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gym-orange/20 rounded-sm flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-gym-orange"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Address</h4>
+                                <p class="text-gray-400">Bungalow No.6, Old Mhada, Swami Vivekanand Nagar,<br>Opposite Ganesh Krupa Society,<br>Vasant Vihar, Thane West – 400610</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gym-orange/20 rounded-sm flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6 text-gym-orange"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Phone</h4>
+                                <p class="text-gray-400">8369013101</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gym-orange/20 rounded-sm flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="mail" class="w-6 h-6 text-gym-orange"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Email</h4>
+                                <p class="text-gray-400">krtxagency@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gym-orange/20 rounded-sm flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6 text-gym-orange"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Hours</h4>
+                                <p class="text-gray-400">6AM-11PM<br>Monday - Sunday</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex gap-4">
+                        <a href="#" class="w-12 h-12 bg-gym-gray hover:bg-gym-orange rounded-sm flex items-center justify-center transition-colors group">
+                            <i data-lucide="instagram" class="w-6 h-6 text-gray-400 group-hover:text-white transition-colors"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gym-gray hover:bg-gym-orange rounded-sm flex items-center justify-center transition-colors group">
+                            <i data-lucide="facebook" class="w-6 h-6 text-gray-400 group-hover:text-white transition-colors"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gym-gray hover:bg-gym-orange rounded-sm flex items-center justify-center transition-colors group">
+                            <i data-lucide="youtube" class="w-6 h-6 text-gray-400 group-hover:text-white transition-colors"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gym-gray hover:bg-gym-orange rounded-sm flex items-center justify-center transition-colors group">
+                            <i data-lucide="message-circle" class="w-6 h-6 text-gray-400 group-hover:text-white transition-colors"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="map-container opacity-0 translate-x-10 transition-all duration-1000 h-full min-h-[400px]">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.1234567890123!2d72.12345678901234!3d19.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA3JzI0LjQiTiA3MsKwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; filter: grayscale(100%) invert(92%) contrast(83%);" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="rounded-sm w-full h-full min-h-[400px]">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- CTA Banner -->
+            <div class="mt-16 bg-gym-orange p-8 md:p-12 rounded-sm text-center transform -skew-y-1">
+                <div class="transform skew-y-1">
+                    <h3 class="font-display text-4xl md:text-5xl text-white mb-4">READY TO TRANSFORM?</h3>
+                    <p class="text-white/90 mb-6 text-lg">Join Universal Fitness Hub Today. Your first step starts here.</p>
+                    <a href="#membership" class="inline-block bg-white text-gym-orange px-8 py-3 font-bold uppercase tracking-wider hover:bg-gym-black hover:text-white transition-colors">
+                        Get Started →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <custom-footer></custom-footer>
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

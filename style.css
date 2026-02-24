@@ -1,0 +1,125 @@
+/* Custom CSS for Universal Fitness Hub */
+
+/* Base Styles */
+body {
+    background-color: #0D0D0D;
+    color: #ffffff;
+}
+
+/* Grain Texture Overlay */
+.grain-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    pointer-events: none;
+    z-index: 50;
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0D0D0D;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FF5C1A;
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e54d0f;
+}
+
+/* Typography Adjustments */
+.font-display {
+    letter-spacing: 0.02em;
+    font-weight: 400;
+}
+
+/* Selection Color */
+::selection {
+    background-color: #FF5C1A;
+    color: #0D0D0D;
+}
+
+/* Navigation Blur Effect */
+.nav-blur {
+    background-color: rgba(13, 13, 13, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 92, 26, 0.1);
+}
+
+/* Animation Classes */
+.fade-up {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.fade-left {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+.fade-right {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+/* Card Hover Effects */
+.trainer-card:hover,
+.pricing-card:hover,
+.review-card:hover,
+.result-card:hover,
+.feature-card:hover {
+    box-shadow: 0 20px 40px rgba(255, 92, 26, 0.1);
+}
+
+/* Image Hover Zoom */
+.gallery-item img {
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Button Hover Effects */
+button, a {
+    transition: all 0.3s ease;
+}
+
+/* Counter Animation Styling */
+.counter {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Map Filter for Dark Theme */
+iframe {
+    filter: grayscale(100%) invert(92%) contrast(83%);
+}
+
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+#mobile-menu.active {
+    max-height: 500px;
+}
+
+/* Diagonal Section Dividers */
+.diagonal-top {
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+}
+:root {
+  --header-height: 100px;
+}
