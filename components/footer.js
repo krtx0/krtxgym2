@@ -6,7 +6,7 @@ class CustomFooter extends HTMLElement {
           <div class="flex flex-col md:flex-row justify-between items-center gap-6">
             
             <div class="font-display text-2xl tracking-wider text-white">
-              UNIVERSAL FITNESS HUB
+              Kevin's Fitness Hub
             </div>
             
             <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
@@ -18,8 +18,8 @@ class CustomFooter extends HTMLElement {
             </div>
 
             <div class="text-gray-500 text-sm text-center md:text-right">
-              <p>© 2025 Universal Fitness Hub. All rights reserved.</p>
-              <p>Vasant Vihar, Thane West, Maharashtra</p>
+              <p>© 2025 Kevin's Fitness Hub. All rights reserved.</p>
+              <p>Location, Mumbai West, Maharashtra</p>
             </div>
 
           </div>

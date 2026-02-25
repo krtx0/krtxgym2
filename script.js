@@ -1,4 +1,4 @@
-// Universal Fitness Hub - Main JavaScript
+// Kevin's Fitness Hub - Main JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize Lucide icons
